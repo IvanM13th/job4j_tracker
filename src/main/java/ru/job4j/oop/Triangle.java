@@ -16,7 +16,7 @@ public class Triangle {
     }
 
     public boolean exist(double ab, double ac, double bc) {
-        return ((ab + ac) > bc && (ab + bc) > ac && (ac + bc) > ab);
+        return (ab + ac) > bc && (ab + bc) > ac && (ac + bc) > ab;
     }
 
     public double area() {
@@ -26,9 +26,17 @@ public class Triangle {
         double bc = second.distance(third);
         if (this.exist(ab, ac, bc)) {
             double p = semiPeremiter(ab, ac, bc);
-            double s = Math.sqrt(p * (p - ab) * (p - bc) * (p - ac));
-            rsl = s;
+            rsl = Math.sqrt(p * (p - ab) * (p - bc) * (p - ac));
         }
         return rsl;
+    }
+
+    public static void main(String[] args) {
+        Point a = new Point(0, 0);
+        Point b = new Point(4, 0);
+        Point c = new Point(0, 4);
+        Triangle triangle = new Triangle(a, b, c);
+        double area1 = triangle.area();
+        System.out.println(area1);
     }
 }
