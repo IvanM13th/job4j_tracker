@@ -10,5 +10,8 @@ public class StartUI {
         LocalDateTime start = item.getDateTime();
         String startDateTimeFortmat = start.format(formatter);
         System.out.println(startDateTimeFortmat);
+
+        Item item1 = new Item();
+        System.out.println(item1);
     }
 }
