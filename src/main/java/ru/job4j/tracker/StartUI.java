@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class StartUI {
     public void init(Scanner scanner, Tracker tracker) {
         boolean run = true;
-        while (run){
+        while (run) {
             showMenu();
             System.out.println("Select: ");
             int select = Integer.parseInt(scanner.nextLine());
             if (select != 6) {
-                System.out.println("Пользователь выбрал: "+ select);
+                System.out.println("Пользователь выбрал: " + select);
             } else {
                 run = false;
             }
