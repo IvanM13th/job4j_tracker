@@ -20,9 +20,6 @@ public class StartUI {
                 System.out.println("Пользователь выбрал: " + select);
                 run = false;
             }
-            {
-
-            }
         }
     }
 
