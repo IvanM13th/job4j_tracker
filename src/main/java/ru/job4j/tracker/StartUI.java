@@ -11,7 +11,7 @@ public class StartUI {
             int select = Integer.parseInt(scanner.nextLine());
             if (select == 0) {
                 System.out.println("=== Create new item ===");
-                System.out.println("Enter name: ");
+                System.out.print("Enter name: ");
                 String name = scanner.nextLine();
                 Item item = new Item(name);
                 tracker.add(item);
@@ -27,7 +27,6 @@ public class StartUI {
                     System.out.println("Хранилище еще не содержит заявок");
                 }
             } else if (select == 6) {
-                System.out.println("Пользователь выбрал: " + select);
                 run = false;
             }
         }
