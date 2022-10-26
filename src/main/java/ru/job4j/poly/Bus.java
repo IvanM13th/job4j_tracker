@@ -15,3 +15,4 @@ public class Bus implements Transport{
         return litres * litreCost;
     }
 }
+
