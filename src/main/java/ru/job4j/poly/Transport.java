@@ -7,3 +7,4 @@ public interface Transport {
 
     double fuel(double litres);
 }
+
