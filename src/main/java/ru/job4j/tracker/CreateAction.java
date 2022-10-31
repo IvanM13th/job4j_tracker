@@ -17,4 +17,3 @@ public class CreateAction implements UserAction {
         return true;
     }
 }
-

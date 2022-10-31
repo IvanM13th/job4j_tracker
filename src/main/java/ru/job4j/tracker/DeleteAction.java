@@ -19,4 +19,3 @@ public class DeleteAction implements UserAction {
         return true;
     }
 }
-
