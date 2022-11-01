@@ -6,3 +6,4 @@ public class ConsoleOutput implements Output {
         System.out.println(obj);
     }
 }
+
