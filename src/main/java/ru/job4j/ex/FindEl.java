@@ -5,7 +5,7 @@ public class FindEl {
         int rsl = -1;
         for (int i = 0; i < value.length; i++) {
             if (value[i].equals(key)) {
-                return rsl = i;
+                return i;
             } else {
                 throw new ElementNotFoundException("ELement not found");
             }
