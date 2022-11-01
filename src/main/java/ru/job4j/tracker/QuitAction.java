@@ -6,6 +6,7 @@ public class QuitAction implements UserAction {
     public QuitAction(Output out) {
         this.out = out;
     }
+
     @Override
     public String name() {
         return "Quit";
