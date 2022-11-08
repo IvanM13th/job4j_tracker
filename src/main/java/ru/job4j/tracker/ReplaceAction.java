@@ -23,9 +23,6 @@ public class ReplaceAction implements UserAction {
         } else {
             out.println("Ошибка замены заявки");
         }
-
         return true;
     }
 }
-
-

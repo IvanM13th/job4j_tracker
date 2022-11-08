@@ -17,5 +17,3 @@ public class QuitAction implements UserAction {
         return false;
     }
 }
-
-
