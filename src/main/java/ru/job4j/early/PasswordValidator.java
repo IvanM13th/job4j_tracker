@@ -9,25 +9,25 @@ public class PasswordValidator {
             throw new IllegalArgumentException("Password should be length [8, 32]");
         }
         char[] array = password.toCharArray();
-        if (!HasUpperCase(array)) {
+        if (!HasUpperCaseCheck(array)) {
             throw new IllegalArgumentException("Password should contain at least one uppercase letter");
         }
-        if (!HasLowerCase(array)) {
+        if (!HasLowerCaseCheck(array)) {
             throw new IllegalArgumentException("Password should contain at least one lowercase letter");
         }
-        if (!HasDigit(array)) {
+        if (!HasDigitCheck(array)) {
             throw new IllegalArgumentException("Password should contain at least one figure");
         }
-        if (!HasSymbol(password)) {
+        if (!HasSymbolCheck(password)) {
             throw new IllegalArgumentException("Password should contain at least one special symbol");
         }
-        if (!NoSubtext(password)) {
+        if (!NoSubtextCheck(password)) {
             throw new IllegalArgumentException("Password shouldn't contain substrings: qwerty, 12345, password, admin, user");
         }
         return password;
     }
 
-    public static boolean HasUpperCase(char[] array) {
+    public static boolean HasUpperCaseCheck(char[] array) {
         boolean upperCase = false;
         for (char x : array) {
             if (Character.isUpperCase(x)) {
@@ -38,7 +38,7 @@ public class PasswordValidator {
         return upperCase;
     }
 
-    public static boolean HasLowerCase(char[] array) {
+    public static boolean HasLowerCaseCheck(char[] array) {
         boolean lowerCase = false;
         for (char x : array) {
             if (Character.isLowerCase(x)) {
@@ -49,7 +49,7 @@ public class PasswordValidator {
         return lowerCase;
     }
 
-    public static boolean HasDigit(char[] array) {
+    public static boolean HasDigitCheck(char[] array) {
         boolean hasDigit = false;
         for (char x : array) {
             if (Character.isDigit(x)) {
@@ -60,7 +60,7 @@ public class PasswordValidator {
         return hasDigit;
     }
 
-    public static boolean HasSymbol(String password) {
+    public static boolean HasSymbolCheck(String password) {
         boolean hasSymbol = false;
         for (int i = 0; i < password.length(); i++) {
             int code = password.codePointAt(i);
@@ -72,7 +72,7 @@ public class PasswordValidator {
         return hasSymbol;
     }
 
-    public static boolean NoSubtext(String password) {
+    public static boolean NoSubtextCheck(String password) {
         boolean noSubtext = true;
         String toLowCasePass = password.toLowerCase();
         int index = -1;
