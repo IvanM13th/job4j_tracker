@@ -21,7 +21,7 @@ public class PasswordValidator {
         if (!hasSymbolCheck(password)) {
             throw new IllegalArgumentException("Password should contain at least one special symbol");
         }
-        if (!noSubtextCheck(password)) {
+        if (noSubtextCheck(password)) {
             throw new IllegalArgumentException("Password shouldn't contain substrings: qwerty, 12345, password, admin, user");
         }
         return password;
@@ -73,18 +73,16 @@ public class PasswordValidator {
     }
 
     public static boolean noSubtextCheck(String password) {
-        boolean noSubtext = true;
+        boolean subtextContains;
         String toLowCasePass = password.toLowerCase();
-        int index = -1;
         String[] subtext = {"qwerty", "12345", "password", "admin", "user"};
         for (String s : subtext) {
-            index = toLowCasePass.indexOf(s);
-            if (index >= 0) {
-                noSubtext = false;
-                break;
+             subtextContains = toLowCasePass.contains(s);
+            if (subtextContains) {
+                return true;
             }
         }
-        return noSubtext;
+        return false;
     }
 
 }
