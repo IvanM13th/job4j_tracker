@@ -43,7 +43,7 @@ public class StartUI {
         actions.add(new DeleteAction(output));
         actions.add(new FindByIdAction(output));
         actions.add(new FindByNameAction(output));
-        actions.add( new QuitAction(output));
+        actions.add(new QuitAction(output));
         new StartUI(output).init(input, tracker, actions);
     }
 }
