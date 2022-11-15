@@ -4,6 +4,7 @@ import ru.job4j.tracker.Item;
 import ru.job4j.tracker.Tracker;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SingleTracker {
     private Tracker tracker = new Tracker();
@@ -27,11 +28,11 @@ public class SingleTracker {
         return tracker.findById(id);
     }
 
-    public ArrayList<Item> findAll(Item item) {
+    public List<Item> findAll(Item item) {
         return tracker.findAll();
     }
 
-    public ArrayList<Item> findByName(String key) {
+    public List<Item> findByName(String key) {
         return tracker.findByName(key);
     }
 
