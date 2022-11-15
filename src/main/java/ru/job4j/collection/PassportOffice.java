@@ -8,7 +8,7 @@ public class PassportOffice {
 
     public boolean add(Citizen citizen) {
         for (String key : citizens.keySet()) {
-            if(citizen.getPassport().contains(key)) {
+            if (citizen.getPassport().contains(key)) {
                 return false;
             }
         }
