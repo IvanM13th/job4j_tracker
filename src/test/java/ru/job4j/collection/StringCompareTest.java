@@ -73,6 +73,7 @@ public class StringCompareTest {
         );
         assertThat(rst).isLessThan(0);
     }
+
     @Test
     public void lastCharOfLeftGreaterThanRightShouldBePositive() {
         StringCompare compare = new StringCompare();
