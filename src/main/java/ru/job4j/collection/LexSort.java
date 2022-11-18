@@ -7,14 +7,12 @@ public class LexSort implements Comparator<String> {
     public int compare(String o1, String o2) {
         String[] string1 = o1.split("\\.");
         String[] string2 = o2.split("\\.");
-        if (!string1.equals(string2)) {
-            for (int index = 0; index < string1.length; index++) {
-                if (Integer.parseInt(string1[index]) != Integer.parseInt(string2[index])) {
-                    return Integer.compare(Integer.parseInt(string1[index]),
-                            Integer.parseInt(string2[index]));
-                }
+        for (int i = 0; i < Math.min(string1.length, string2.length); i++) {
+            if (Integer.parseInt(string1[i]) != Integer.parseInt(string2[i])) {
+                return Integer.compare(Integer.parseInt(string1[i]), Integer.parseInt(string2[i]));
             }
         }
         return 0;
     }
 }
+
