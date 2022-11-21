@@ -23,39 +23,4 @@ public class LexSortTest {
         assertThat(input).containsExactly(out);
     }
 
-    @Test
-    public void sortDecimalNumbers() {
-        String[] input = {
-                "10.2.3 Task4.",
-                "10.4.5 Task2.",
-                "10.1.4 Task5."
-
-        };
-        String[] out = {
-                "10.1.4 Task5.",
-                "10.2.3 Task4.",
-                "10.4.5 Task2."
-        };
-        Arrays.sort(input, new LexSort());
-        assertThat(input).containsExactly(out);
-    }
-
-    @Test
-    public void sortSomeNumbers() {
-        String[] input = {
-                "10.2.3 Task4.",
-                "10.4.5 Task2.",
-                "10.1.4 Task5.",
-                "6. Task1."
-
-        };
-        String[] out = {
-                "6. Task1.",
-                "10.1.4 Task5.",
-                "10.2.3 Task4.",
-                "10.4.5 Task2."
-        };
-        Arrays.sort(input, new LexSort());
-        assertThat(input).containsExactly(out);
-    }
 }
