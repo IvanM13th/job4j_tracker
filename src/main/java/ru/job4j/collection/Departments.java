@@ -6,11 +6,10 @@ public class Departments {
     public static List<String> fillGaps(List<String> deps) {
         Set<String> tmp = new LinkedHashSet<>();
         for (String value : deps) {
-            String first = "";
-            String[] start = value.split("/", 0);
+            String start = "";
             for (String el : value.split("/")) {
-                String elToAdd = el.equals(start[0]) ? first : ("/" + el);
-                tmp.add(start[0] + elToAdd);
+                start += "".equals(start) ? el : "/" + el;
+                tmp.add(start);
             }
         }
         return  new ArrayList<>(tmp);
