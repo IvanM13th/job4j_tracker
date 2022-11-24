@@ -8,10 +8,8 @@ public class ProductLabel {
         return products.stream()
                 .filter(product -> (product.getStandard() - product.getActual()) >= 0)
                 .filter(product -> (product.getStandard() - product.getActual()) <= 3)
-                .map(product -> "Label{"
-                        + "name='" + product.getName() + '\''
-                        + ", price=" + product.getPrice() / 2
-                        + '}')
+                .map(product -> new Label(product.getName(), product.getPrice() / 2))
+                .map(obj -> obj.toString())
                 .collect(Collectors.toList());
     }
 }
