@@ -30,7 +30,6 @@ public class Analyze {
                 .flatMap(s -> s.subjects().stream())
                 .collect(Collectors
                         .groupingBy(Subject::name,
-                                LinkedHashMap::new,
                                 Collectors.averagingDouble(Subject::score)))
                 .entrySet()
                 .stream()
@@ -53,7 +52,6 @@ public class Analyze {
                 .flatMap(s -> s.subjects().stream())
                 .collect(Collectors
                         .groupingBy(Subject::name,
-                                LinkedHashMap::new,
                                 Collectors.summingDouble(Subject::score)))
                 .entrySet()
                 .stream()
