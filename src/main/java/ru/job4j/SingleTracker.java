@@ -1,13 +1,13 @@
 package ru.job4j;
 
 import ru.job4j.tracker.Item;
-import ru.job4j.tracker.Tracker;
+import ru.job4j.tracker.MemTracker;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SingleTracker {
-    private Tracker tracker = new Tracker();
+    private MemTracker tracker = new MemTracker();
     private static SingleTracker instance = null;
 
     private SingleTracker() {
