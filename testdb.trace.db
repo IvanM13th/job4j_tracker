@@ -1,0 +1,34 @@
+2023-01-16 09:28:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ITEMS" not found (this database is empty); SQL statement:
+insert into items (name, created) values(?,?) [42104-214]
+2023-01-16 09:28:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ITEMS" not found (this database is empty); SQL statement:
+select * from items where id = ? [42104-214]
+2023-01-16 09:28:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ITEMS" not found (this database is empty); SQL statement:
+delete from items [42104-214]
+2023-01-16 09:45:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "DATABASECHANGELOGLOCK" не найдена
+Table "DATABASECHANGELOGLOCK" not found; SQL statement:
+SELECT COUNT(*) FROM DATABASECHANGELOGLOCK [42102-214]
+2023-01-16 09:45:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" уже существует
+Table "ITEMS" already exists; SQL statement:
+create table items (
+id serial primary key,
+name text,
+created timestamp) [42101-214]
+2023-01-16 09:48:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" уже существует
+Table "ITEMS" already exists; SQL statement:
+create table items (
+id serial primary key,
+name text,
+created timestamp) [42101-214]
+2023-01-16 09:51:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ITEMS" уже существует
+Table "ITEMS" already exists; SQL statement:
+create table items (
+id serial primary key,
+name text,
+created timestamp) [42101-214]
