@@ -66,6 +66,7 @@ public class SqlTrackerTest {
         SqlTracker tracker = new SqlTracker(connection);
         Item item = tracker.add(new Item("item"));
         assertThat(tracker.delete(item.getId())).isTrue();
+        assertThat(tracker.findById(item.getId())).isNull();
     }
 
     @Test
